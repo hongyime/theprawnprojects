@@ -27,7 +27,7 @@ The Prawn Projects is a high-contrast portfolio application styled in a raw Neob
 
 ```bash
 # Clone the repository
-git clone https://github.com/bryanseah234/prawnprojects.git
+git clone https://github.com/hongyime/prawnprojects.git
 
 # Navigate to project directory
 cd prawnprojects
@@ -75,4 +75,4 @@ MIT License
 
 ---
 
-**Author:** <a href="https://github.com/bryanseah234">bryanseah234</a>
+**Author:** <a href="https://github.com/hongyime">hongyime</a>
