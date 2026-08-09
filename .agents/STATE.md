@@ -31,6 +31,12 @@ plain-text state under `.agents/` that survives harness switches.
 3. Verify it reads this file and understands the current branch/state.
 4. If successful, push/open PRs for the MOLT branches.
 
+Exact Phase 3 proof prompt to paste into a different CLI:
+
+```text
+resume from X:\01 REPOSITORIES\_shell\PROGRESS.md
+```
+
 ## Decisions made
 
 - Seed only one active repo to avoid noisy empty state files across all repos.
@@ -42,6 +48,8 @@ plain-text state under `.agents/` that survives harness switches.
 - `.agents/STATE.md` is intended to be committed and may be public.
 - `_shell/PROGRESS.md` is outside a Git repo and exists only on this machine
   unless copied or otherwise synced.
+- Local Git config previously had credential-bearing remote URL entries; they
+  were removed, leaving only `remote.origin.url`.
 
 ## Files in play
 
