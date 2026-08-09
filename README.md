@@ -76,3 +76,7 @@ MIT License
 ---
 
 **Author:** <a href="https://github.com/hongyime">hongyime</a>
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
