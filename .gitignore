@@ -26,6 +26,11 @@ dist-ssr
 # AI / editor dot directories (managed via sourcerepo)
 .*
 !.github/
+!.agents/
+!.agents/STATE.md
+!.agents/JOURNAL.md
+!.agents/handoffs/
+!.agents/handoffs/**
 !.gitignore
 !.gitattributes
 !.gitmodules
