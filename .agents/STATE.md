@@ -3,7 +3,7 @@
 **Updated:** 2026-08-09 SGT
 **By:** codex / machine: desktop
 **Branch:** `molt/state-continuity`
-**Ended because:** ready for cross-harness proof
+**Ended because:** ready for cross-harness proof with committed handoff
 
 ---
 
@@ -23,13 +23,16 @@ plain-text state under `.agents/` that survives harness switches.
   through sync while keeping `.claude/` local-only.
 - `.gitignore` now allows `.agents/STATE.md`, `.agents/JOURNAL.md`, and
   `.agents/handoffs/**` to be tracked while broad dot-directory cleanup remains.
+- Added a committed handoff under `.agents/handoffs/` so the seeded repo can be
+  resumed by another harness without depending only on source-repo state.
 
 ## Next steps
 
 1. Open a different CLI from the discovered harness list.
 2. Ask it to resume from `X:\01 REPOSITORIES\_shell\PROGRESS.md`.
 3. Verify it reads this file and understands the current branch/state.
-4. If successful, push/open PRs for the MOLT branches.
+4. Ask it to read `.agents/handoffs/2026-08-09-molt-proof-seed.md`.
+5. If successful, push/open PRs for the MOLT branches.
 
 Exact Phase 3 proof prompt to paste into a different CLI:
 
@@ -54,6 +57,7 @@ resume from X:\01 REPOSITORIES\_shell\PROGRESS.md
 ## Files in play
 
 - `.agents/STATE.md`
+- `.agents/handoffs/2026-08-09-molt-proof-seed.md`
 - `X:\01 REPOSITORIES\_shell\PROGRESS.md`
 - `X:\01 REPOSITORIES\sourcerepo\AGENTS.md`
 
