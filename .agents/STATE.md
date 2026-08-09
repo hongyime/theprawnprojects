@@ -64,3 +64,16 @@ resume from X:\01 REPOSITORIES\_shell\PROGRESS.md
 ## Open questions for the human
 
 - Which alternate harness should be used for the Phase 3 proof?
+
+<!-- MOLT_AUTO_START -->
+## Auto State
+
+- Updated: 2026-08-09 23:23:22 +08:00
+- Machine: PRAWN-E14
+- Harness: codex
+- Event: harden-test
+- Branch: main
+- HEAD: 81bed72
+- Dirty files: 0
+- Resume hint: Read .agents/STATE.md, then the latest file in .agents/handoffs/ if present.
+<!-- MOLT_AUTO_END -->
