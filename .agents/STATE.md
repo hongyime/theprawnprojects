@@ -3,7 +3,7 @@
 **Updated:** 2026-08-09 SGT
 **By:** codex / machine: desktop
 **Branch:** `molt/state-continuity`
-**Ended because:** in progress
+**Ended because:** ready for cross-harness proof
 
 ---
 
@@ -14,19 +14,22 @@ plain-text state under `.agents/` that survives harness switches.
 
 ## Status
 
-`in-progress`
+`ready-for-review`
 
 ## Done so far
 
 - Seeded `.agents/STATE.md` in this repo only.
 - Central `sourcerepo` branch `molt/state-continuity` now preserves `.agents/`
   through sync while keeping `.claude/` local-only.
+- `.gitignore` now allows `.agents/STATE.md`, `.agents/JOURNAL.md`, and
+  `.agents/handoffs/**` to be tracked while broad dot-directory cleanup remains.
 
 ## Next steps
 
 1. Open a different CLI from the discovered harness list.
 2. Ask it to resume from `X:\01 REPOSITORIES\_shell\PROGRESS.md`.
 3. Verify it reads this file and understands the current branch/state.
+4. If successful, push/open PRs for the MOLT branches.
 
 ## Decisions made
 
@@ -37,6 +40,8 @@ plain-text state under `.agents/` that survives harness switches.
 
 - Windows/PowerShell environment; bash has fork issues on this machine.
 - `.agents/STATE.md` is intended to be committed and may be public.
+- `_shell/PROGRESS.md` is outside a Git repo and exists only on this machine
+  unless copied or otherwise synced.
 
 ## Files in play
 
