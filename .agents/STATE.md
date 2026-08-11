@@ -1,66 +1,62 @@
 # STATE
 
-**Updated:** 2026-08-09 SGT
+**Updated:** 2026-08-11 SGT
 **By:** codex / machine: desktop
-**Branch:** `molt/state-continuity`
-**Ended because:** ready for cross-harness proof with committed handoff
+**Branch:** `wrapup/final`
+**Ended because:** waiting for cold different-CLI MOLT proof
 
 ---
 
 ## Task
 
-Use `theprawnprojects` as the first active repo proving MOLT Layer 0: committed
-plain-text state under `.agents/` that survives harness switches.
+Prove MOLT Layer 0 still works in a real downstream repo after the SHELL/MOLT
+wrap-up work: committed `.agents/STATE.md` plus a committed handoff must give a
+fresh CLI enough context to continue without relying on local Codex memory.
 
 ## Status
 
-`ready-for-review`
+`in-progress`
 
 ## Done so far
 
-- Seeded `.agents/STATE.md` in this repo only.
-- Central `sourcerepo` branch `molt/state-continuity` now preserves `.agents/`
-  through sync while keeping `.claude/` local-only.
-- `.gitignore` now allows `.agents/STATE.md`, `.agents/JOURNAL.md`, and
-  `.agents/handoffs/**` to be tracked while broad dot-directory cleanup remains.
-- Added a committed handoff under `.agents/handoffs/` so the seeded repo can be
-  resumed by another harness without depending only on source-repo state.
+- Verified `.agents/STATE.md` is not ignored with `git check-ignore -v`.
+- Confirmed `.agents/STATE.md` and `.agents/handoffs/2026-08-09-molt-proof-seed.md`
+  are already tracked by Git.
+- Created branch `wrapup/final` from `main`.
+- Generated a new handoff:
+  `.agents/handoffs/2026-08-11-075711-molt-wrapup-proof.md`.
+- Updated this state file for a cold resume proof.
 
 ## Next steps
 
-1. Open a different CLI from the discovered harness list.
-2. Ask it to resume from `X:\01 REPOSITORIES\_shell\PROGRESS.md`.
-3. Verify it reads this file and understands the current branch/state.
-4. Ask it to read `.agents/handoffs/2026-08-09-molt-proof-seed.md`.
-5. If successful, push/open PRs for the MOLT branches.
-
-Exact Phase 3 proof prompt to paste into a different CLI:
-
-```text
-resume from X:\01 REPOSITORIES\_shell\PROGRESS.md
-```
+1. In a different CLI, cold-start in `X:\01 REPOSITORIES\theprawnprojects`.
+2. Say only: `continue`.
+3. Verify the CLI reads this file and the new handoff before acting.
+4. It should report the current task, branch, and next safe action.
 
 ## Decisions made
 
-- Seed only one active repo to avoid noisy empty state files across all repos.
-- Keep secrets and personal details out of `.agents/`.
+- Use `theprawnprojects` as the single proof repo to avoid noisy empty state
+  files across every repository.
+- Keep durable handoff state in `.agents/`, not `.claude/`, because `.claude/`
+  remains local-only and is not a cross-harness continuity layer.
+- Use `wrapup/final` for this proof to respect the no-commits-to-main rule.
 
 ## Gotchas
 
-- Windows/PowerShell environment; bash has fork issues on this machine.
-- `.agents/STATE.md` is intended to be committed and may be public.
-- `_shell/PROGRESS.md` is outside a Git repo and exists only on this machine
-  unless copied or otherwise synced.
-- Local Git config previously had credential-bearing remote URL entries; they
-  were removed, leaving only `remote.origin.url`.
+- Windows/PowerShell environment; bash is unreliable on this machine.
+- `.agents/` files are committed and may be public, so do not place secrets,
+  private credentials, or personal details here.
+- The fresh CLI may not have any local memory-tool context. Trust this file and
+  the committed handoff, then verify with Git.
 
 ## Files in play
 
-- `.agents/STATE.md`
-- `.agents/handoffs/2026-08-09-molt-proof-seed.md`
-- `X:\01 REPOSITORIES\_shell\PROGRESS.md`
-- `X:\01 REPOSITORIES\sourcerepo\AGENTS.md`
+- `.agents/STATE.md` - durable current snapshot for the next CLI.
+- `.agents/handoffs/2026-08-11-075711-molt-wrapup-proof.md` - detailed proof
+  handoff for the next CLI.
+- `.agents/handoffs/2026-08-09-molt-proof-seed.md` - prior proof handoff.
 
 ## Open questions for the human
 
-- Which alternate harness should be used for the Phase 3 proof?
+- Which CLI will be used for the cold resume proof?
