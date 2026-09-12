@@ -9,8 +9,8 @@ interface NeoCardProps {
 export const NeoCard: React.FC<NeoCardProps> = ({ title, children, className = '' }) => {
   return (
     <article aria-label={title} className={`
-      border-3 border-neo-black bg-neo-white 
-      p-6 shadow-neo transition-all duration-200 
+      border-3 border-neo-black bg-neo-white
+      p-6 shadow-neo transition-[color,background-color,border-color,box-shadow,transform] duration-200
       hover:shadow-neo-hover hover:translate-x-[3px] hover:translate-y-[4px]
       flex flex-col group
       ${className}
@@ -36,7 +36,7 @@ export const NeoButton: React.FC<NeoButtonProps> = ({ children, className = '', 
         px-6 py-3 font-bold uppercase tracking-wider
         border-3 border-neo-black bg-neo-white
         shadow-neo active:shadow-none active:translate-x-[5px] active:translate-y-[8px]
-        transition-all duration-100 hover:bg-neo-grey
+        transition-[color,background-color,border-color,box-shadow,transform] duration-100 hover:bg-neo-grey
         disabled:opacity-50 disabled:cursor-not-allowed
         ${className}
       `}
@@ -58,7 +58,7 @@ export const NeoLink: React.FC<NeoLinkProps> = ({ children, className = '', ...p
         text-xl font-bold uppercase
         hover:bg-neo-grey hover:text-neo-black px-1
         border-b-3 border-transparent hover:border-neo-black
-        transition-all duration-200
+        transition-[color,background-color,border-color,box-shadow,transform] duration-200
         ${className}
       `}
       {...props}
@@ -68,7 +68,7 @@ export const NeoLink: React.FC<NeoLinkProps> = ({ children, className = '', ...p
   );
 };
 export const NeoProjectLink: React.FC<NeoLinkProps> = ({ children, className = '', ...props }) => (
-  <a className={`px-6 py-3 font-bold uppercase tracking-wider border-3 border-neo-black bg-neo-white shadow-neo active:shadow-none active:translate-x-[5px] active:translate-y-[8px] transition-all duration-100 hover:bg-neo-grey ${className}`} {...props}>
+  <a className={`px-6 py-3 font-bold uppercase tracking-wider border-3 border-neo-black bg-neo-white shadow-neo active:shadow-none active:translate-x-[5px] active:translate-y-[8px] transition-[color,background-color,border-color,box-shadow,transform] duration-100 hover:bg-neo-grey ${className}`} {...props}>
     {children}
   </a>
 );

@@ -1,3 +1,7 @@
+## Prawn UI maintenance — 2026-09-12
+
+Added first-tab skip-to-projects navigation and reduced-motion card behavior while retaining all 26 public destinations and Prawn tokens. Five catalog checks, type checking, production build and the public artifact guard pass. Six desktop/mobile browser scenarios pass at 1440/390/320 pixels under both motion preferences. Production release remains pending. Original local edits are preserved.
+
 # STATE
 
 Updated 2026-09-10 SGT. Task: portfolio upkeep and removal of browser account access.
