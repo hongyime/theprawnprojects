@@ -3,6 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  .skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    border: 3px solid #000;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    transform: translateY(calc(-100% - 2rem));
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
   a:focus-visible, button:focus-visible {
     outline: 3px solid #000;
     outline-offset: 5px;
@@ -11,6 +26,9 @@
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
+    }
+    article:hover {
+      transform: none;
     }
   }
 }

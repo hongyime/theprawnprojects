@@ -8,13 +8,14 @@ const updatedDate = new Intl.DateTimeFormat('en-SG', {
 
 const App: React.FC = () => (
   <div className="min-h-screen flex flex-col p-4 md:p-8 max-w-7xl mx-auto gap-8 md:gap-12">
+    <a className="skip-link" href="#main-content">Skip to projects</a>
     <header className="flex justify-center items-center border-b-3 border-neo-black pb-6 md:pb-8 pt-4 overflow-hidden">
       <h1 className="text-[6vw] sm:text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-none text-center whitespace-nowrap w-full">
         The Prawn <span className="bg-neo-grey px-2 inline-block transform -skew-x-6 border-3 border-neo-black shadow-neo ml-1 sm:ml-4">Projects</span>
       </h1>
     </header>
 
-    <main className="flex-grow">
+    <main id="main-content" tabIndex={-1} className="flex-grow">
       <div className="mb-6 md:mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <h2 className="text-2xl md:text-3xl font-bold uppercase decoration-neo-grey underline decoration-4 underline-offset-4">Deployed Works</h2>
         <p className="text-xs font-bold uppercase">
