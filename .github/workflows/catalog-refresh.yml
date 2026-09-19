@@ -1,0 +1,42 @@
+name: Catalog Refresh
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch:
+
+concurrency:
+  group: catalog-refresh
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh catalog from Vercel API
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+        run: node scripts/auto-update-catalog.mjs
+
+      - name: Commit if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/projects.json
+          git diff --staged --quiet && echo "No changes" || (
+            git commit -m "chore(data): auto-refresh project catalog [skip ci]" &&
+            git push
+          )

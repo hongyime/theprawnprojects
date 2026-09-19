@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T01:29:14.138Z",
+  "updatedAt": "2026-09-19T01:57:34.537Z",
   "projects": [
     {
       "id": "ctfpawned",
@@ -12,12 +12,6 @@
       "name": "dejavista",
       "framework": "vite",
       "link": "https://dejavista.hong-yi.me/"
-    },
-    {
-      "id": "frontend",
-      "name": "frontend",
-      "framework": "nextjs",
-      "link": "https://frontend-gilt-zeta-25.vercel.app/"
     },
     {
       "id": "gmaplists",
@@ -54,6 +48,12 @@
       "name": "sgcertwatch",
       "framework": null,
       "link": "https://sgcertwatch.hong-yi.me/"
+    },
+    {
+      "id": "sgconnectsphere",
+      "name": "sgconnectsphere",
+      "framework": "vite",
+      "link": "https://sgconnectsphere.hong-yi.me/"
     },
     {
       "id": "sgshiok",
