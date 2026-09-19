@@ -21,9 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: npm
-
-      - run: npm ci
+          # No npm ci needed — auto-update-catalog.mjs uses only Node built-ins
 
       - name: Refresh catalog from Vercel API
         env:
