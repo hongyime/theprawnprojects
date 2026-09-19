@@ -29,9 +29,17 @@ async function fetchAllProjects() {
     url.searchParams.set('limit', '100');
     if (from !== undefined) url.searchParams.set('from', String(from));
 
-    const resp = await fetch(url.toString(), {
-      headers: { Authorization: `Bearer ${VERCEL_TOKEN}` },
-    });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30_000);
+    let resp;
+    try {
+      resp = await fetch(url.toString(), {
+        headers: { Authorization: `Bearer ${VERCEL_TOKEN}` },
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(timer);
+    }
 
     if (!resp.ok) {
       const body = await resp.text().catch(() => '');
