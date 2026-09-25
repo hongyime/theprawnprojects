@@ -5,8 +5,8 @@
  *   VERCEL_TOKEN=<token> VERCEL_TEAM_ID=<teamId> node scripts/auto-update-catalog.mjs
  *
  * Environment variables:
- *   VERCEL_TOKEN   — required; a Vercel API token with read access to projects
- *   VERCEL_TEAM_ID — optional; defaults to the hardcoded team slug
+ *   VERCEL_TOKEN   - required; a Vercel API token with read access to projects
+ *   VERCEL_TEAM_ID - optional; defaults to the hardcoded team slug
  */
 
 import { writeFile } from 'node:fs/promises';
@@ -19,11 +19,26 @@ if (!VERCEL_TOKEN) {
   throw new Error('VERCEL_TOKEN environment variable is required');
 }
 
+// Vercel returns up to 100 projects per page. 50 pages = 5000 projects, far
+// more than any real account should have. This caps pagination so a stuck or
+// misbehaving cursor can never turn into a runaway loop - which is exactly
+// what caused "Catalog Refresh" to crash with a JS heap OOM (exit code 134)
+// on every scheduled run before this fix.
+const MAX_PAGES = 50;
+
 async function fetchAllProjects() {
   const projects = [];
   let from;
+  let page = 0;
 
   do {
+    page += 1;
+    if (page > MAX_PAGES) {
+      throw new Error(
+        `Vercel project pagination exceeded ${MAX_PAGES} pages (${projects.length} projects fetched so far) - aborting to avoid a runaway loop. Check the Vercel API pagination cursor.`,
+      );
+    }
+
     const url = new URL('https://api.vercel.com/v9/projects');
     url.searchParams.set('teamId', VERCEL_TEAM_ID);
     url.searchParams.set('limit', '100');
@@ -48,7 +63,13 @@ async function fetchAllProjects() {
 
     const data = await resp.json();
     projects.push(...(data.projects ?? []));
+    const previousFrom = from;
     from = data.pagination?.next;
+    if (from !== undefined && from === previousFrom) {
+      throw new Error(
+        `Vercel API pagination cursor did not advance (stuck at "${from}") after ${projects.length} projects - aborting to avoid a runaway loop.`,
+      );
+    }
   } while (from !== undefined);
 
   return projects;
@@ -79,4 +100,4 @@ await writeFile(
   JSON.stringify(catalog, null, 2) + '\n',
 );
 
-console.log(`✓ ${catalog.projects.length} projects written — ${checkedAt}`);
+console.log(`Wrote ${catalog.projects.length} projects - ${checkedAt}`);
