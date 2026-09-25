@@ -70,7 +70,7 @@ async function fetchAllProjects() {
         `Vercel API pagination cursor did not advance (stuck at "${from}") after ${projects.length} projects - aborting to avoid a runaway loop.`,
       );
     }
-  } while (from !== undefined);
+  } while (from != null);
 
   return projects;
 }
