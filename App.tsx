@@ -44,7 +44,6 @@ const App: React.FC = () => (
       <div className="flex flex-col items-center justify-center text-center gap-4">
         <h2 className="text-3xl md:text-4xl font-bold uppercase">Get In Touch</h2>
         <div className="flex flex-col gap-2 items-center">
-          <NeoLink href="mailto:hello@hong-yi.me">hello@hong-yi.me</NeoLink>
           <NeoLink href="https://www.hong-yi.me" target="_blank" rel="noopener noreferrer">www.hong-yi.me</NeoLink>
         </div>
       </div>
