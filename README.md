@@ -67,7 +67,7 @@ MIT License
 
 ---
 
-**Author:** <a href="https://github.com/hongyime">hongyime</a>
+Maintained by project contributors.
 
 ## License
 
