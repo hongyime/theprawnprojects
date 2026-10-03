@@ -1,7 +1,7 @@
 # PRD: theprawnprojects
 
 ## Overview
-A React web app that fetches and displays all of Bryan's deployed Vercel projects via the Vercel API. Renders each project as a neobrutalist card with name, framework, and live link. Serves as a public portfolio index of all active deployments.
+A React web app that fetches and displays all of the maintainer's deployed Vercel projects via the Vercel API. Renders each project as a neobrutalist card with name, framework, and live link. Serves as a public portfolio index of all active deployments.
 
 ## Goals
 - Fetch project list from Vercel API using a bearer token
@@ -18,8 +18,8 @@ A React web app that fetches and displays all of Bryan's deployed Vercel project
 - Analytics
 
 ## User Stories
-- As a visitor to Bryan's portfolio, I want to see all his live projects at a glance.
-- As Bryan, I want a single page that auto-updates with all my Vercel deployments.
+- As a visitor to the maintainer's portfolio, I want to see all his live projects at a glance.
+- As the maintainer, I want a single page that auto-updates with all my Vercel deployments.
 
 ## Tech Stack
 - **Language**: TypeScript / React
@@ -89,3 +89,5 @@ Set `VERCEL_API_TOKEN` in `.env` or Vercel project settings.
 - **Token exposure**: API token must be in server-side context or kept in Vercel env vars — not bundled in client JS
 - **Live data**: grid auto-reflects all Vercel projects; no manual curation needed
 - **Framework field**: may be `null` for non-framework projects; defaults to `'React'` display
+
+Machine-specific values in this document use privacy placeholders.
