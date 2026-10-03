@@ -21,3 +21,7 @@ Publish the reviewed commit, verify both public domains and record the deploymen
 ## Earlier handoff
 
 The previous MOLT continuity proof remains documented in `handoffs/2026-08-11-075711-molt-wrapup-proof.md` and `handoffs/2026-08-09-molt-proof-seed.md`.
+
+## Reviewed workspace maintenance - 2026-09-27
+
+Publish the reviewed portability and privacy maintenance from the current default branch, preserving concurrent upstream work and original workspace changes. Validation is limited to the documented offline fixtures and hosted checks; no live data job or deployment command was executed locally.
