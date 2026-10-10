@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T03:53:44.041Z",
+  "updatedAt": "2026-10-10T11:45:08.199Z",
   "projects": [
     {
       "id": "ctfpawned",
@@ -56,12 +56,6 @@
       "link": "https://sgcertwatch.hong-yi.me/"
     },
     {
-      "id": "sgconnectsphere",
-      "name": "sgconnectsphere",
-      "framework": "vite",
-      "link": "https://sgconnectsphere.hong-yi.me/"
-    },
-    {
       "id": "sgshiok",
       "name": "sgshiok",
       "framework": "nextjs",
@@ -72,12 +66,6 @@
       "name": "sgstylesnap",
       "framework": "vite",
       "link": "https://sgstylesnap.hong-yi.me/"
-    },
-    {
-      "id": "smucourses",
-      "name": "smucourses",
-      "framework": "nextjs",
-      "link": "https://smucourses.hong-yi.me/"
     },
     {
       "id": "smuseats",
@@ -92,22 +80,10 @@
       "link": "https://spritescavenger.hong-yi.me/"
     },
     {
-      "id": "swiperboxd",
-      "name": "swiperboxd",
-      "framework": "fastapi",
-      "link": "https://swiperboxd.hong-yi.me/"
-    },
-    {
       "id": "theprawnfeeds",
       "name": "theprawnfeeds",
       "framework": "flask",
       "link": "https://theprawnfeeds.hong-yi.me/"
-    },
-    {
-      "id": "theprawngame",
-      "name": "theprawngame",
-      "framework": "vite",
-      "link": "https://theprawngame.hong-yi.me/"
     },
     {
       "id": "theprawnhome",
@@ -144,12 +120,6 @@
       "name": "theprawnstatus",
       "framework": "vite",
       "link": "https://theprawnstatus.vercel.app/"
-    },
-    {
-      "id": "theprawnsurprise",
-      "name": "theprawnsurprise",
-      "framework": "vite",
-      "link": "https://theprawnsurprise.hong-yi.me/"
     },
     {
       "id": "ticketremaster",
