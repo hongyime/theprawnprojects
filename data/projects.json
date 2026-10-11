@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T11:57:46.031Z",
+  "updatedAt": "2026-10-11T17:27:20.250Z",
   "projects": [
     {
       "id": "ctfpawned",
@@ -56,10 +56,10 @@
       "link": "https://sgcertwatch.hong-yi.me/"
     },
     {
-      "id": "sgshiok",
-      "name": "sgshiok",
-      "framework": "nextjs",
-      "link": "https://sgshiok.hong-yi.me/"
+      "id": "sgconnectsphere",
+      "name": "sgconnectsphere",
+      "framework": "vite",
+      "link": "https://sgconnectsphere.hong-yi.me/"
     },
     {
       "id": "sgstylesnap",
