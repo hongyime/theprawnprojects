@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T14:10:17.155Z",
+  "updatedAt": "2026-10-13T00:02:29.931Z",
   "projects": [
     {
       "id": "ctfpawned",
@@ -68,6 +68,12 @@
       "link": "https://sgstylesnap.hong-yi.me/"
     },
     {
+      "id": "smucourses",
+      "name": "smucourses",
+      "framework": "nextjs",
+      "link": "https://smucourses.hong-yi.me/"
+    },
+    {
       "id": "smuseats",
       "name": "smuseats",
       "framework": "vite",
@@ -84,6 +90,12 @@
       "name": "theprawnfeeds",
       "framework": "flask",
       "link": "https://theprawnfeeds.hong-yi.me/"
+    },
+    {
+      "id": "theprawngame",
+      "name": "theprawngame",
+      "framework": "vite",
+      "link": "https://theprawngame.hong-yi.me/"
     },
     {
       "id": "theprawnhome",
@@ -114,6 +126,12 @@
       "name": "theprawnsplit",
       "framework": "vite",
       "link": "https://theprawnsplit.hong-yi.me/"
+    },
+    {
+      "id": "theprawnstatus",
+      "name": "theprawnstatus",
+      "framework": "vite",
+      "link": "https://theprawnstatus.vercel.app/"
     },
     {
       "id": "ticketremaster",
