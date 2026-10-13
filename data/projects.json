@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T13:21:38.277Z",
+  "updatedAt": "2026-10-13T22:11:48.607Z",
   "projects": [
     {
       "id": "ctfpawned",
@@ -132,6 +132,12 @@
       "name": "theprawnstatus",
       "framework": "vite",
       "link": "https://theprawnstatus.vercel.app/"
+    },
+    {
+      "id": "theprawnsurprise",
+      "name": "theprawnsurprise",
+      "framework": "vite",
+      "link": "https://theprawnsurprise.hong-yi.me/"
     },
     {
       "id": "ticketremaster",
