@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T11:51:27.903Z",
+  "updatedAt": "2026-10-19T18:10:55.795Z",
   "projects": [
     {
       "id": "ctfpawned",
@@ -84,6 +84,12 @@
       "name": "spritescavenger",
       "framework": "nextjs",
       "link": "https://spritescavenger.hong-yi.me/"
+    },
+    {
+      "id": "swiperboxd",
+      "name": "swiperboxd",
+      "framework": "fastapi",
+      "link": "https://swiperboxd.hong-yi.me/"
     },
     {
       "id": "theprawnfeeds",
